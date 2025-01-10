@@ -11,7 +11,7 @@ import map from '@/images/map.png'
 
 const contact = () => {
   return (
-    <div className='sm:h-[120vh] h-[270vh] w-screen   ' id='contact'>
+    <div className='sm:h-[120vh] h-[280vh] w-screen   ' id='contact'>
 
 
 
