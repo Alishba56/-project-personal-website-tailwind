@@ -18,7 +18,7 @@ const footer = () => {
         < FaGithub className='hover:text-gray-400' />
         <FaInstagram className='hover:text-gray-400'/>
       </div>
-        <h1 className='text-1xl py-5 font-bold text-center'>@Alishba Shahzad|copyright</h1>
+        <h1 className='text-1xl mt-5 font-bold text-center'>@Alishba Shahzad|copyright</h1>
         </div>
     
 
