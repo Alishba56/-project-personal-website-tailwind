@@ -87,22 +87,6 @@ const about = () => {
 }
 
 export default about
-// Key Skills of a Frontend Developer
-// HTML (HyperText Markup Language): Structures content on web pages. HTML is essential for organizing web content like text, images, and videos into readable elements.
-// CSS (Cascading Style Sheets): Styles the HTML content, defining layout, colors, fonts, and spacing to align with design standards and branding.
-// JavaScript: Adds interactivity and dynamic behavior to websites, such as animations, dropdown menus, and real-time data updates for enhanced user experience.
-// Frameworks and Libraries (React, Vue.js, Angular): These tools help developers build complex, scalable web applications more efficiently by providing reusable components and state management.
-// Responsive and Adaptive Design: Ensures that websites look and function well on various screen sizes and devices, providing a consistent experience across desktops, tablets, and mobiles.
-// Version Control (Git): Tracks code changes and enables collaboration with other developers, making it easier to manage code versions and project history.
-// Cross-Browser Compatibility: Tests and ensures that web applications function correctly across various browsers, including Chrome, Firefox, Safari, and Edge.
-// Accessibility (a11y): Develops websites that are usable for people with disabilities by following accessibility guidelines and best practices.
-
-
-
-
-
-
-
 
 
 
