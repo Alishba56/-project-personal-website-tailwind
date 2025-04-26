@@ -2,13 +2,29 @@ import React from 'react'
 import Image from 'next/image'
 import img from '@/images/logo.png'
 import backgroud from '@/images/back.png'
+import { useState, useEffect } from "react"
+import Contact from './contact'
+const Hero = () => {
+  
+  const [isContactOpen, setIsContactOpen] = useState(false)
+  useEffect(() => {
+    const storedContactState = localStorage.getItem("contactOpen")
+    if (storedContactState) {
+      setIsContactOpen(JSON.parse(storedContactState))
+    }
+  }, [])
 
-const home = () => {
+  useEffect(() => {
+    localStorage.setItem("contactOpen", JSON.stringify(isContactOpen))
+  }, [isContactOpen])
+  const toggleContact = () => {
+    setIsContactOpen((prev) => !prev)
+  } 
+
   return (
-    <div className=' h-[100vh] w-[106%] '>
-         
+    <div className='  h-[100vh] w-[106%] '>
     <Image
-      className='object-cover  h-[100vh] w-[100%]  '
+      className='object-cover   h-[100vh] w-[100%]  '
       src={backgroud}
       alt="Logo"
       />
@@ -21,10 +37,22 @@ const home = () => {
           height={200}
         />
         <h1 className='mt-10 sm:text-3xl text-2xl text-gray-600 font-bold pl-5'>Alishba Shahzad</h1>
-        <h2></h2>
+        <div className="mt-4 flex gap-4"> 
+          <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-6 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition duration-300">
+            Hire Me
+          </button>
+  <Contact  isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+          <button 
+        className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-6 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition duration-300"
+
+        onClick={toggleContact}
+      >
+        Contact Me
+      </button>
+        </div>
     </div>
     </div>
   )
 }
 
-export default home
+export default Hero

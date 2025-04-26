@@ -1,29 +1,27 @@
-import About from '@/components/about'
-import Contact from '@/components/contact'
-import Education from '@/components/education'
-import Footer from '@/components/footer'
-import Header from '@/components/header'
-import Home from '@/components/home'
-import Interests from '@/components/interests'
-import Skills from '@/components/skills'
-import React from 'react'
+"use client";
 
-const page = () => {
+import About from "@/components/about";
+import Hero from "@/components/home";
+import Education from "@/components/education";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import Interests from "@/components/interests";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
+
+export default function Home() {
   return (
-    <div className='flex'>
-     <Header/>
-     <div>
-     <Home/>
-     <Skills/>
-     <Education/>
-     <Interests/>
-     <About/>
-      <Contact/>
-       <Footer/>
-
-     </div>
+    <div className="flex  overflow-hidden">
+      <Header />
+      <div>
+        <Hero />
+        <Skills />
+        <Education />
+        <Interests />
+        <About />
+        <Projects />
+        <Footer />
+      </div>
     </div>
-  )
+  );
 }
-
-export default page

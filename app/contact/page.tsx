@@ -1,45 +1,45 @@
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
 interface ContactProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
 
 export default function Contact({ isOpen, onClose }: ContactProps) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden"
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "unset"
     }
 
     return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
+      document.body.style.overflow = "unset"
+    }
+  }, [isOpen])
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // Handle form submission logic here
-    console.log({ name, email, message });
+    console.log({ name, email, message })
     // Reset form fields
-    setName("");
-    setEmail("");
-    setMessage("");
-    onClose();
-  };
+    setName("")
+    setEmail("")
+    setMessage("")
+    onClose()
+  }
   return (
     <>
-      {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
+    {isOpen && (
+        <div className="fixed inset-0 bg-purple-900 bg-opacity-50 flex items-center justify-center z-50"        >
           <div className="bg-white dark:bg-gray-800 rounded-lg p-8  max-w-md w-full relative">
-            <button
+          <button
               onClick={onClose}
               className="absolute top-4 right-4 text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-200"
             >
@@ -105,7 +105,9 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
             </form>
           </div>
         </div>
-      )}
+    )  }
+
     </>
   );
-}
+};
+

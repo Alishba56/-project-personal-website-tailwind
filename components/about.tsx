@@ -1,93 +1,84 @@
-import React from 'react'
- import Image from 'next/image'
- import img from '@/images/pic.png'
- import { SlArrowRight } from "react-icons/sl";
+import React from "react";
+import { SlArrowRight } from "react-icons/sl";
 
-
-const about = () => {
+const AboutMe = () => {
   return (
-    <div className='sm:h-[150vh] h-[280vh] w-screen  ' id='about'>
-      <div className='w-[106%]  h-[2px] bg-gray-400'></div>
-        <div className='sm:ml-[25%]  sm:mt-[10%] mt-20 px-2'>
-        <h1 className='flex text-5xl font-bold text-gray-600 px-5 text-center'>ABOUT ME</h1>
-        <p className='mt-10  text-gray-400 px-5'>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <div
+      className="w-full overflow-hidden py-12 px-4 sm:px-6 lg:px-16"
+      id="about"
+    >
+      <div className="w-full h-[2px] bg-gray-400 mb-10"></div>
+      <div className="sm:ml-[25%] px-6 sm:mt-[5%] mt-20 h-full">
+        <h1 className="text-4xl font-bold text-gray-700  mb-8">About Me</h1>
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-600 mb-4">
+          Front-End Developer
+        </h2>
+        <p className="text-gray-400 leading-relaxed mb-8">
+          I&apos;m a passionate web developer with a strong focus on front-end
+          technologies. Currently pursuing a Bachelor&apos;s degree in Arts,
+          I&apos;m always eager to learn and grow while working on innovative
+          projects.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <SlArrowRight className="text-orange-600" />
+              <span className="font-semibold text-gray-600">Birthday:</span>
+              <span className="text-gray-400">23-June-2003</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SlArrowRight className="text-orange-600" />
+              <span className="font-semibold text-gray-600">Website:</span>
+              <span className="text-gray-400">www.example.com</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SlArrowRight className="text-orange-600" />
+              <span className="font-semibold text-gray-600">Phone:</span>
+              <span className="text-gray-400">+92 320 4053333</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SlArrowRight className="text-orange-600" />
+              <span className="font-semibold text-gray-600">City:</span>
+              <span className="text-gray-400">Karachi, Pakistan</span>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <SlArrowRight className="text-orange-600" />
+              <span className="font-semibold text-gray-600">Age:</span>
+              <span className="text-gray-400">21</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SlArrowRight className="text-orange-600" />
+              <span className="font-semibold text-gray-600">Degree:</span>
+              <span className="text-gray-400">ADA</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SlArrowRight className="text-orange-600" />
+              <span className="font-semibold text-gray-600">Email:</span>
+              <span className="text-gray-400 break-all">
+                alishbah.shahzad666@gmail.com
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <SlArrowRight className="text-orange-600" />
+              <span className="font-semibold text-gray-600">Freelance:</span>
+              <span className="text-gray-400">Available</span>
+            </div>
+          </div>
         </div>
 
-
-      
-      
-        <div className=' flex flex-wrap sm:mt-32 mt-10 sm:ml-[15%] px-4 '>
-         <Image
-          className=' w-[80%] sm:w-[35%] sm:h-[25vw] object-cover h-[60vw]'
-          src={img}
-          alt="Logo"
-                    />
-     
-     
-     <div className='w-[60%] ml-10'>
-        <h1 className='text-2xl font-bold sm:mt-0 mt-10  text-gray-600 '>UI/UX Designer & Web Developer.</h1>
-        <p className='text-1xl mt-3  text-gray-400'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-       <div className='flex flex-wrap sm:gap-40 gap-5'>
-        <div>
-       
-    <div className='flex mt-7 items-center gap-3'>
-        <h1 className='text-1xl font-bold flex items-center gap-2  text-gray-600'> <SlArrowRight className='text-orange-600'/> Birthday:</h1>
-        <p  className='text-1xl  text-gray-400'>23-june-2003</p>
-        </div>
-        <div className='flex mt-5 items-center gap-3'>
-        <h1 className='text-1xl font-bold flex items-center gap-2  text-gray-600'> <SlArrowRight className='text-orange-600'/> Websites:</h1>
-        <p  className='text-1xl  text-gray-400'>
-        www.example.com</p>
-        </div>
-
-        <div className='flex mt-5 items-center gap-3'>
-        <h1 className='text-1xl font-bold flex items-center gap-2  text-gray-600'><SlArrowRight className='text-orange-600'/> Phone:</h1>
-        <p  className='text-1xl  text-gray-400'>+123 456 7890</p>
-        </div>
-        <div className='flex mt-5 items-center gap-3'>
-        <h1 className='text-1xl font-bold flex items-center gap-2  text-gray-600'> <SlArrowRight className='text-orange-600'/> City:</h1>
-        <p  className='text-1xl  text-gray-400'>Pakistan,karachi</p>
-        </div>
-        </div>
-        
-        <div>
-        <div className='flex sm:mt-7  items-center gap-3'>
-        <h1 className='text-1xl font-bold flex items-center gap-2  text-gray-600 '> <SlArrowRight className='text-orange-600'/> Age:</h1>
-        <p  className='text-1xl  text-gray-400'>21</p>
-        </div>
-        <div className='flex mt-5 items-center gap-3'>
-        <h1 className='text-1xl font-bold flex items-center gap-2  text-gray-600'> <SlArrowRight className='text-orange-600'/> Degree:</h1>
-        <p  className='text-1xl  text-gray-400'>
-        ADA</p>
-        </div>
-
-        <div className='flex mt-5 items-center gap-3'>
-        <h1 className='text-1xl font-bold flex items-center gap-2  text-gray-600'> <SlArrowRight className='text-orange-600'/>Email:</h1>
-        <p  className='text-1xl  text-gray-400'>email@example.com</p>
-        </div>
-        <div className='flex mt-5 items-center gap-3'>
-        <h1 className='text-1xl font-bold flex items-center gap-2  text-gray-600'> <SlArrowRight className='text-orange-600'/> Freelance:</h1>
-        <p  className='text-1xl  text-gray-400'>Available</p>
-      
-        </div>
-        </div>
-        </div>
-        <p className='mt-10  text-gray-400'>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.</p>
-
-
-
-        </div>
-      
-
-        </div>
-    
-        
+        <p className="mt-8 text-gray-400 leading-relaxed">
+          I am a passionate and driven front-end developer, eager to apply my
+          skills and contribute to innovative web projects. I am proficient in
+          HTML, CSS, JavaScript, React, and Next.js, and I am committed to
+          creating user-friendly and visually appealing web experiences.
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default about
-
-
-
-
+export default AboutMe;
